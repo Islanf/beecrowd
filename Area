@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Area
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            #region Entrada de Dados
+            string[] dados = Console.ReadLine().Split(' ');
+            double pi = 3.14159;
+            float a = float.Parse(dados[0]);
+            float b = float.Parse(dados[1]);
+            float c = float.Parse(dados[2]);
+            #endregion
+
+            #region Calculos
+            float areaTriangulo = (a * c) / 2;
+            double circuloRaio = pi * (c * c);
+            float areaTrapezio = ((a + b) / 2) * c;
+            float areaQuadrado = b * b;
+            float areaRetangulo = a * b;
+            #endregion
+
+            #region Saída De dados
+            Console.WriteLine($"TRIANGULO: {areaTriangulo.ToString("F3")}");
+            Console.WriteLine($"CIRCULO: {circuloRaio.ToString("F3")}");
+            Console.WriteLine($"TRAPEZIO: {areaTrapezio.ToString("F3")}");
+            Console.WriteLine($"QUADRADO: {areaQuadrado.ToString("F3")}");
+            Console.WriteLine($"RETANGULO: {areaRetangulo.ToString("F3")}");
+            Console.ReadKey();
+
+            #endregion
+
+        }
+    }
+
+}
