@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CalculoSimples
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+
+            string[] resultado = Console.ReadLine().Split(' ');
+
+            int cod1 = int.Parse(resultado[0]); 
+            int numeroPeca1 = int.Parse(resultado[1]);  
+            decimal valorPeca1 = decimal.Parse(resultado[2]);
+
+            string[] resultado2 = Console.ReadLine().Split(' ');
+
+            int cod2 = int.Parse(resultado2[0]);    
+            int numeroPeca2 = int.Parse(resultado2[1]); 
+            decimal valorPeca2 = decimal.Parse(resultado2[2]);  
+
+            decimal valor = (numeroPeca1*valorPeca1) + (numeroPeca2*valorPeca2);
+
+            Console.WriteLine($"VALOR A PAGAR: R$ {valor.ToString("F")}"); //Interpolação de strings
+
+            Console.ReadKey();
+        }
+    }
+}
