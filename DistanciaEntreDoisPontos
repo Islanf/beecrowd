@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DistanciaEntreDoisPontos
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            #region Entrada de dados de P1
+            string [] planoCartesiano1 = Console.ReadLine().Split(' ');
+            double x1 = double.Parse(planoCartesiano1[0]);
+            double y1 = double.Parse((planoCartesiano1[1]));
+            #endregion
+
+            #region Entrada de dados de P2
+            string [] planoCartesiano2 = Console.ReadLine().Split(' ');
+            double x2 = double.Parse(planoCartesiano2[0]);
+            double y2 = double.Parse(planoCartesiano2 [1]);
+            #endregion
+
+            #region Calculo
+     
+            double distancia = Math.Sqrt((Math.Pow((x2 - x1), 2)) + (Math.Pow((y2 - y1), 2)));
+
+            #endregion
+
+            #region Resultado
+            Console.WriteLine($"{distancia.ToString("F4")}");
+            #endregion
+
+            Console.ReadKey();  
+
+
+
+        }
+    }
+}
