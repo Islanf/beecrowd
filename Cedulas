@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cedulas
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            #region Entrada de dados
+            int notas = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(notas);
+            #endregion
+
+            #region Calculo
+
+            int notas100 = (notas / 100);
+            notas = notas - (notas100 * 100);
+
+            int notas50 = (notas / 50);
+            notas = notas - (notas50 * 50);
+
+            int notas20 = (notas / 20);
+            notas = notas - (notas20 * 20);
+
+            int notas10 = (notas / 10);
+            notas = notas - (notas10 * 10);
+
+            int notas5 = (notas / 5);
+            notas = notas - (notas5 * 5);
+
+            int notas2 = (notas / 2);
+            notas = notas - (notas2 * 2);
+
+            int notas1 = (notas / 1);
+            notas = notas - (notas1 * 1);
+            #endregion
+
+            #region MyRegion
+            Console.WriteLine(notas100 + " notas (s) de R$ 100,00");
+            Console.WriteLine(notas50 + " notas (s) de R$ 50,00");
+            Console.WriteLine(notas20 + " notas (s) de R$ 20,00");
+            Console.WriteLine(notas10 + " notas (s) de R$ 10,00");
+            Console.WriteLine(notas5 + " notas (s) de R$ 5,00");
+            Console.WriteLine(notas2 + " notas (s) de R$ 2,00");
+            Console.WriteLine(notas1 + " notas (s) de R$ 1,00");
+            Console.ReadKey();
+            #endregion
+
+
+
+        }
+    }
+}
