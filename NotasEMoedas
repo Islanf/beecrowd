@@ -1,0 +1,93 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NotasEMoedas
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            #region Entrada de dados
+            decimal notas = Convert.ToDecimal(Console.ReadLine());
+
+            #endregion
+
+            #region Calculo
+
+            
+            int notas100 = (int)notas / 100;
+            notas = notas - (notas100 * 100);
+
+            int notas50 = (int)notas / 50;
+            notas = notas - (notas50 * 50);
+
+            int notas20 = (int)notas / 20;
+            notas = notas - (notas20 * 20);
+
+            int notas10 = (int)notas / 10;
+            notas = notas - (notas10 * 10);
+
+            int notas5 = (int)notas / 5;
+            notas = notas - (notas5 * 5);
+
+            int notas2 = (int)notas / 2;
+            notas = notas - (notas2 * 2);
+
+           
+
+            int moedas1 = (int)notas / 1;
+            notas = notas - (moedas1 * 1);
+
+            decimal v = notas / 0.50m;
+            int moedas50 = (int)v;
+            notas = notas - (moedas50 * 0.50m);
+
+            v = notas / 0.25m;
+            int moedas25 = (int)v;
+            notas = notas - (moedas25 * 0.25m);
+
+
+            v = notas / 0.10m;
+            int moedas10 = (int)v;
+            notas = notas - (moedas10 * 0.10m);
+
+
+            v = notas / 0.05m;
+            int moedas5 = (int)v;
+            notas = notas - (moedas5 * 0.05m);
+
+
+            v = notas / 0.01m;
+            int moedas01 = (int)v;
+            notas = notas - (moedas01 * 0.01m);
+
+
+            #endregion
+
+            #region Resultado
+            Console.WriteLine("NOTAS:");
+            Console.WriteLine(notas100 + " nota(s) de R$ 100.00");
+            Console.WriteLine(notas50 + " nota(s) de R$ 50.00");
+            Console.WriteLine(notas20 + " nota(s) de R$ 20.00");
+            Console.WriteLine(notas10 + " nota(s) de R$ 10.00");
+            Console.WriteLine(notas5 + " nota(s) de R$ 5.00");
+            Console.WriteLine(notas2 + " nota(s) de R$ 2.00 ");
+            Console.WriteLine("MOEDAS:");
+            Console.WriteLine(moedas1 + " moeda(s) de R$ 1.00");
+            Console.WriteLine(moedas50 + " moeda(s) de R$ 0.50");
+            Console.WriteLine(moedas25 + " moeda(s) de R$ 0.25");
+            Console.WriteLine(moedas10 + " moeda(s) de R$ 0.10");
+            Console.WriteLine(moedas5 + " moeda(s) de R$ 0.05");
+            Console.WriteLine(moedas01 + " moeda(s) de R$ 0.01");
+            Console.ReadLine();
+            #endregion
+
+
+
+
+        }
+    }
+}
