@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FormulaDeBhaskara
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+
+            #region Entrada de Dados
+            string[] numeros = Console.ReadLine().Split(' ');
+            double a = double.Parse(numeros[0]);
+            double b = double.Parse(numeros[1]);
+            double c = double.Parse(numeros[2]);
+
+            #endregion
+
+            #region Calculo e Resultados
+            double delta = (b * b) - (4 * a * c);
+
+
+
+            if (delta > 0 && a != 0)
+            {
+
+                double r1 = ((-b) + (Math.Sqrt(delta))) / (2 * a);
+                double r2 = ((-b) - (Math.Sqrt(delta))) / (2 * a);
+
+
+
+                Console.WriteLine($"R1 = {r1.ToString("F5")}");
+                Console.WriteLine($"R2 = {r2.ToString("F5")}");
+
+            }
+            else
+            {
+                Console.WriteLine("Impossivel calcular");
+            }
+            #endregion
+
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
