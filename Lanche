@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lanche
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string [] numeros = Console.ReadLine().Split(' ');
+            int codigo = int.Parse(numeros[0]);
+            int quantidade = int.Parse(numeros[1]); 
+
+            if (codigo == 1)
+            {
+                decimal total = quantidade * 4.00m;
+                Console.WriteLine($"Total: R$ {total.ToString("0.00")}");
+            }
+            else if (codigo == 2)
+            {
+                decimal total = quantidade * 4.50m;
+                Console.WriteLine($"Total: R$ {total.ToString("0.00")}");
+
+            }
+            else if (codigo == 3)
+            {
+                decimal total = quantidade * 5.00m;
+                Console.WriteLine($"Total: R$ {total.ToString("0.00")}");
+            }
+            else if (codigo == 4)
+            {
+                decimal total = quantidade * 2.00m;
+                Console.WriteLine($"Total: R$ {total.ToString("0.00")}");
+            }
+            else if (codigo == 5)
+            {
+                decimal total = quantidade * 1.50m;
+                Console.WriteLine($"Total: R$ {total.ToString("0.00")}");
+            }
+            
+           
+            Console.ReadLine();
+
+        }
+    }
+}
